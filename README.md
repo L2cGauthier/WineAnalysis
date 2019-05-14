@@ -294,7 +294,7 @@ In a more visual way, we can see most of these descriptive statistics on the fol
 f, (ax_box, ax_hist) = plt.subplots(2, sharex=True, gridspec_kw={"height_ratios": (0.25, 0.75)})
  
 #Associate a plot to each of the subplot grid
-sns.boxplot(df["Score"], ax=ax_box).set_title("Basic representation of the Score feature\n")
+sns.boxplot(df["Score"], ax=ax_box).set_title("Basic representationtion of the Score feature\n")
 sns.distplot(df["Score"], ax=ax_hist, kde=False, fit=stats.gamma, bins=20) 
 #We can fit a gamma distribution, just for the sake of representation.
  
@@ -307,7 +307,7 @@ plt.show()
 ```
 
 
-![png](output_14_0.png)
+![png](pictures/output_14_0.png)
 
 
 
