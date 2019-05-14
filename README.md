@@ -364,11 +364,11 @@ print("Kurtosis: %f" % df['Description_Length'].kurt())
 ```
 
 
-![png](output_17_0.png)
+![png](pictures/output_17_0.png)
 
 
 
-![png](output_17_1.png)
+![png](pictures/output_17_1.png)
 
 
     Skewness: 0.616101
@@ -437,7 +437,7 @@ print("Proportion of wines with short description with a score below the set's m
 ```
 
 
-![png](output_21_0.png)
+![png](pictures/output_21_0.png)
 
 
     Mean score given after a description shorter than 70 words: 84.02 / 100
@@ -460,7 +460,7 @@ print("Correlation between Score and Description_Length:",round(corr,2))
 ```
 
 
-![png](output_23_0.png)
+![png](pictures/output_23_0.png)
 
 
     Correlation between Score and Description_Length: 0.56
@@ -561,7 +561,7 @@ plt.show()
 ```
 
 
-![png](output_35_0.png)
+![png](pictures/output_35_0.png)
 
 
 At first, each additionnal component adds a lot to the explained variance ratio. With each additional component, the marginal gain of explained variance decreases steeply until around 50 components. After that, the marginal gain decreases a lot slower.
@@ -683,7 +683,7 @@ FitAndScore(dt, X_train, X_test, y_train, y_test)
     
 
 
-![png](output_47_1.png)
+![png](pictures/output_47_1.png)
 
 
 This simple decision tree has been really fast to train, and gives already good results. It seems that our tree predicts above-median scoring wines with more ease.
@@ -732,7 +732,7 @@ FitAndScore(nb, X_train_01, X_test_01, y_train, y_test)
     
 
 
-![png](output_49_1.png)
+![png](pictures/output_49_1.png)
 
 
 MultinomialNB was even faster than the simple decision tree classifier, and gives slightly better results. Here again, the model has more trouble predicting low scores (class 0) than high scores (class 1).
@@ -777,7 +777,7 @@ FitAndScore(LSVC, X_train, X_test, y_train, y_test)
     
 
 
-![png](output_51_1.png)
+![png](pictures/output_51_1.png)
 
 
 The results given by SVM with simple linear kernel are even better. Although, it took twice as long as our decision tree classifier, and 100 times longer than the Naive Bayes approach. So depending on the application, the model choice is not necessarily obvious here.
@@ -819,7 +819,7 @@ FitAndScore(rf, X_train, X_test, y_train, y_test)
     
 
 
-![png](output_53_1.png)
+![png](pictures/output_53_1.png)
 
 
 The results keep getting better ! Sadly, the time needed for training is also mush higher. Here it is still reasonnable due to the relatively low number of trees generated.
@@ -910,7 +910,7 @@ FitAndScore(bclf, X_train, X_test, y_train, y_test)
     
 
 
-![png](output_57_1.png)
+![png](pictures/output_57_1.png)
 
 
 Surprisingly enough, the Adaboosted Random Forest shows worse results than the simple random forest. Although, it would probably get better with more estimators, but the training would also be much longer, so here again, it all depends on the application.
@@ -935,117 +935,7 @@ FitAndScore(mlp, X_train, X_test, y_train, y_test)
     Iteration 1, loss = 0.48384536
     Iteration 2, loss = 0.39732942
     Iteration 3, loss = 0.39004297
-    Iteration 4, loss = 0.38772081
-    Iteration 5, loss = 0.38685643
-    Iteration 6, loss = 0.38569841
-    Iteration 7, loss = 0.38533636
-    Iteration 8, loss = 0.38445488
-    Iteration 9, loss = 0.38443889
-    Iteration 10, loss = 0.38407863
-    Iteration 11, loss = 0.38352819
-    Iteration 12, loss = 0.38323902
-    Iteration 13, loss = 0.38290065
-    Iteration 14, loss = 0.38234861
-    Iteration 15, loss = 0.38201774
-    Iteration 16, loss = 0.38157544
-    Iteration 17, loss = 0.38147271
-    Iteration 18, loss = 0.38055012
-    Iteration 19, loss = 0.38074692
-    Iteration 20, loss = 0.38008922
-    Iteration 21, loss = 0.37916041
-    Iteration 22, loss = 0.37841628
-    Iteration 23, loss = 0.37758585
-    Iteration 24, loss = 0.37683534
-    Iteration 25, loss = 0.37567234
-    Iteration 26, loss = 0.37441387
-    Iteration 27, loss = 0.37307085
-    Iteration 28, loss = 0.37182788
-    Iteration 29, loss = 0.37050217
-    Iteration 30, loss = 0.36914710
-    Iteration 31, loss = 0.36778966
-    Iteration 32, loss = 0.36603101
-    Iteration 33, loss = 0.36469038
-    Iteration 34, loss = 0.36311986
-    Iteration 35, loss = 0.36144850
-    Iteration 36, loss = 0.36001689
-    Iteration 37, loss = 0.35813005
-    Iteration 38, loss = 0.35642163
-    Iteration 39, loss = 0.35386662
-    Iteration 40, loss = 0.35155215
-    Iteration 41, loss = 0.34865519
-    Iteration 42, loss = 0.34536302
-    Iteration 43, loss = 0.34097993
-    Iteration 44, loss = 0.33568081
-    Iteration 45, loss = 0.32835519
-    Iteration 46, loss = 0.31950038
-    Iteration 47, loss = 0.30738074
-    Iteration 48, loss = 0.29203488
-    Iteration 49, loss = 0.27475272
-    Iteration 50, loss = 0.25635602
-    Iteration 51, loss = 0.23711013
-    Iteration 52, loss = 0.21828251
-    Iteration 53, loss = 0.19891769
-    Iteration 54, loss = 0.18109578
-    Iteration 55, loss = 0.16309360
-    Iteration 56, loss = 0.14667158
-    Iteration 57, loss = 0.13214674
-    Iteration 58, loss = 0.11707526
-    Iteration 59, loss = 0.10404030
-    Iteration 60, loss = 0.09213357
-    Iteration 61, loss = 0.08153266
-    Iteration 62, loss = 0.07163116
-    Iteration 63, loss = 0.06279547
-    Iteration 64, loss = 0.05487397
-    Iteration 65, loss = 0.04815344
-    Iteration 66, loss = 0.04238593
-    Iteration 67, loss = 0.03659184
-    Iteration 68, loss = 0.03172749
-    Iteration 69, loss = 0.02831129
-    Iteration 70, loss = 0.02523057
-    Iteration 71, loss = 0.02163968
-    Iteration 72, loss = 0.01918447
-    Iteration 73, loss = 0.01678699
-    Iteration 74, loss = 0.01558324
-    Iteration 75, loss = 0.01409969
-    Iteration 76, loss = 0.01406971
-    Iteration 77, loss = 0.01139102
-    Iteration 78, loss = 0.01118106
-    Iteration 79, loss = 0.01588115
-    Iteration 80, loss = 0.01057873
-    Iteration 81, loss = 0.00790128
-    Iteration 82, loss = 0.00798255
-    Iteration 83, loss = 0.02942509
-    Iteration 84, loss = 0.01054220
-    Iteration 85, loss = 0.00716483
-    Iteration 86, loss = 0.00709857
-    Iteration 87, loss = 0.00709407
-    Iteration 88, loss = 0.00747404
-    Iteration 89, loss = 0.00756804
-    Iteration 90, loss = 0.00739501
-    Iteration 91, loss = 0.03470174
-    Iteration 92, loss = 0.00676213
-    Iteration 93, loss = 0.00649115
-    Iteration 94, loss = 0.00692903
-    Iteration 95, loss = 0.00711762
-    Iteration 96, loss = 0.00697599
-    Iteration 97, loss = 0.00677121
-    Iteration 98, loss = 0.01145755
-    Iteration 99, loss = 0.02852421
-    Iteration 100, loss = 0.00653972
-    Iteration 101, loss = 0.00652004
-    Iteration 102, loss = 0.00646600
-    Iteration 103, loss = 0.00671148
-    Iteration 104, loss = 0.00686389
-    Iteration 105, loss = 0.00797029
-    Iteration 106, loss = 0.02746782
-    Iteration 107, loss = 0.00627692
-    Iteration 108, loss = 0.00668706
-    Iteration 109, loss = 0.00649116
-    Iteration 110, loss = 0.00663809
-    Iteration 111, loss = 0.00675597
-    Iteration 112, loss = 0.00662620
-    Iteration 113, loss = 0.03238145
-    Iteration 114, loss = 0.00907470
+	...
     Iteration 115, loss = 0.00636454
     Iteration 116, loss = 0.00634574
     Iteration 117, loss = 0.00638533
@@ -1079,7 +969,7 @@ FitAndScore(mlp, X_train, X_test, y_train, y_test)
     
 
 
-![png](output_59_1.png)
+![png](pictures/output_59_1.png)
 
 
 Our neural network gives slightly better results than other models. But its training took A LOT of time. It might or might not be worth it depending on the application.
